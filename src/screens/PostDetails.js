@@ -12,7 +12,7 @@ const PostDetails = ({ route, navigation }) => {
 
   const handleDelete = async (id) => {
     try {
-      const response = await fetch(`http://172.31.241.219:5000/api/v1/${id}`, {
+      const response = await fetch(`http://192.168.29.127:5000/api/v1/${id}`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
@@ -34,7 +34,7 @@ const PostDetails = ({ route, navigation }) => {
   };
 
   return (
-    <View style={globalStyles.container}>
+    <View>
       <Card containerStyle={globalStyles.card}>
         <Image source={{ uri: post.photo }} style={globalStyles.cardImage} />
         <Card.Title style={globalStyles.cardTitle}>{post.title}</Card.Title>

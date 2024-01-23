@@ -8,7 +8,7 @@ const HomeScreen = ({ navigation }) => {
   const [id, setId] = useState(null);
 
   useEffect(() => {
-    fetch("http://172.31.241.219:5000/api/v1")
+    fetch("http://192.168.29.127:5000/api/v1")
       .then((response) => response.json())
       .then((data) => {
         console.log("Fetched Data:", data.data); // Log the data
@@ -41,10 +41,14 @@ const HomeScreen = ({ navigation }) => {
   };
 
   return (
-    <View style={globalStyles.container}>
+    <View>
       <View style={globalStyles.topSection}>
-        <Text style={globalStyles.headerText}>Blog Posts</Text>
-        <Button title="Add Post" onPress={handleAddPost} />
+        <Text style={globalStyles.headerText}>Tech Blogs</Text>
+        <Button
+          style={globalStyles.addText}
+          title="Add Post"
+          onPress={handleAddPost}
+        />
       </View>
       <FlatList
         data={posts}

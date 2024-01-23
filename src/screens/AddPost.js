@@ -58,7 +58,7 @@ const AddPost = () => {
           name: "photo.jpg",
         });
       }
-      const response = await fetch("http://172.31.241.219:5000/api/v1/create", {
+      const response = await fetch("http://192.168.29.127:5000/api/v1/create", {
         method: "POST",
         headers: {
           "Content-Type": "multipart/form-data",
@@ -82,7 +82,7 @@ const AddPost = () => {
   };
 
   return (
-    <View>
+    <View style={globalStyles.containing}>
       <View>
         <Text>Title</Text>
         <TextInput
@@ -110,7 +110,11 @@ const AddPost = () => {
         {photo && (
           <Image source={{ uri: photo }} style={{ width: 200, height: 200 }} />
         )}
-        <Button title="Pick Image" onPress={handleImagePicker} />
+        <Button
+          style={globalStyles.imaging}
+          title="Pick Image"
+          onPress={handleImagePicker}
+        />
       </View>
       <View>
         <Button title="Create" onPress={() => onSubmit()} />

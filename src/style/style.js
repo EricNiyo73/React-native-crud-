@@ -17,6 +17,10 @@ export const globalStyles = StyleSheet.create({
   headerText: {
     fontSize: 24,
     fontWeight: "bold",
+    marginLeft: 20,
+  },
+  addText: {
+    marginTop: 20,
   },
   cardContainer: {
     marginBottom: 20,
@@ -49,7 +53,10 @@ export const globalStyles = StyleSheet.create({
     borderWidth: 1,
     marginBottom: 10,
     padding: 8,
-    width: "100%",
+    width: "98%",
+  },
+  containing: {
+    marginLeft: 20,
   },
   pickimageButton: {
     borderColor: "gray",
@@ -71,5 +78,8 @@ export const globalStyles = StyleSheet.create({
     fontWeight: "bold",
     letterSpacing: 0.25,
     color: "white",
+  },
+  imaging: {
+    backgroundColor: "green",
   },
 });

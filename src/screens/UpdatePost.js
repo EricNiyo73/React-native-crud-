@@ -67,7 +67,7 @@ const UpdatePost = ({ route }) => {
         });
       }
 
-      const response = await fetch(`http://172.31.241.219:5000/api/v1/${id}`, {
+      const response = await fetch(`http://192.168.29.127:5000/api/v1/${id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "multipart/form-data",
